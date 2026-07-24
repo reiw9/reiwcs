@@ -15,8 +15,8 @@ export function CTASection() {
             Have a website that needs someone who&rsquo;ll stick with it?
           </h2>
           <p className="mx-auto mt-5 max-w-md text-balance text-muted">
-            Remote roles, freelance work, or a focused project — I read every
-            message myself and reply personally.
+            Remote roles, freelance work, or a focused project — if that
+            sounds like what you need, let&rsquo;s talk.
           </p>
           <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button href="/contact" size="lg" icon={<Mail className="h-4 w-4" />}>

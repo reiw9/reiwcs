@@ -29,7 +29,7 @@ export default function JCDentalPage() {
 
       <Section className="pt-0">
         <Reveal>
-          <SectionHeading eyebrow={jcDental.overview.heading} title="What this project actually is" />
+          <SectionHeading eyebrow={jcDental.overview.heading} title="What this project is" />
         </Reveal>
         <Reveal delay={0.05} className="mt-10 flex max-w-2xl flex-col gap-5">
           {jcDental.overview.body.map((paragraph) => (
@@ -45,7 +45,7 @@ export default function JCDentalPage() {
           <SectionHeading
             eyebrow="Challenges"
             title="What was actually broken"
-            description="Real, specific problems — not generic pain points."
+            description="Specific problems, not generic pain points."
           />
         </Reveal>
         <div className="mt-14">
@@ -67,7 +67,7 @@ export default function JCDentalPage() {
 
       <Section className="pt-0">
         <Reveal>
-          <SectionHeading eyebrow="Lessons Learned" title="What actually stuck" />
+          <SectionHeading eyebrow="Lessons Learned" title="What stuck" />
         </Reveal>
         <div className="mt-14">
           <InfoGrid items={jcDental.lessonsLearned} columns={2} numbered />

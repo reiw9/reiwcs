@@ -11,9 +11,20 @@ export interface ProjectSummary {
   description: string;
   role: string;
   year: string;
+  status: "complete" | "ongoing";
   tags: string[];
   href: string;
   featured?: boolean;
+}
+
+export interface ExternalProject {
+  title: string;
+  description: string;
+  role: string;
+  year: string;
+  status: "complete" | "ongoing";
+  tags: string[];
+  href: string;
 }
 
 export interface CaseStudySection {

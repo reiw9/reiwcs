@@ -1,37 +1,30 @@
 export const jcDental = {
   meta: {
     title: "JC Dental",
-    tagline: "Website operations & product work for a live dental clinic",
-    role: "Website Operations & Product Coordination",
+    tagline: "Website operations for a dental clinic",
+    role: "Website Operations",
     year: "2026 — Present",
-    status: "In production",
+    status: "ongoing",
     links: {
-      live: "#",
+      live: "https://jc-dent.com/",
       repo: "#",
     },
-    stack: [
-      "React-based frontend",
-      "Sanity CMS",
-      "Supabase (Database & Auth)",
-      "Cloudflare (Deployment, DNS, CDN)",
-      "Git & GitHub",
-      "AI-assisted development tools",
-    ],
+    stack: ["UI/UX", "Security", "Performance", "QA"],
   },
 
   overview: {
     heading: "Overview",
     body: [
-      "JC Dental is a real, in-production website for a dental clinic — not a demo or a personal side-project built in isolation. I've worked on it as a website operator and product-minded collaborator: directing AI-assisted development, making UX and product calls, and handling the operational work that keeps a live site running for real patients.",
-      "I'm not the sole engineer behind it, and I'm not a software engineer by training. My contribution sits at the intersection of product thinking, technical coordination, and hands-on execution — using AI tools as my primary development partner while owning the decisions, the quality bar, and the follow-through that AI alone can't provide.",
-      "The work spanned the full lifecycle of a live product: UI/UX improvements, SEO, accessibility, CMS content modeling, Supabase integration, Cloudflare deployment, security auditing, performance work, and the QA and documentation that hold it all together.",
+      "JC Dental is a dental clinic's website. I'm the website operator — deciding what patients see when they try to book an appointment, and giving clinic staff the ability to change content themselves without a developer.",
+      "My role isn't writing every line of code myself. It's deciding what needs to change, reviewing every result, and making sure the finished product is something I'd stand behind.",
+      "The specifics — what was actually broken, what I changed, and what I learned — are below.",
     ],
   },
 
   challenges: [
     {
       heading: "Booking flow friction",
-      body: "The appointment booking flow asked for too much upfront, gave unclear feedback at each step, and left patients unsure whether their booking had actually gone through — a serious problem for a healthcare site where trust matters.",
+      body: "The appointment booking flow asked for too much upfront, gave unclear feedback at each step, and left patients unsure whether their booking had gone through at all — a serious problem for a healthcare site where trust matters.",
     },
     {
       heading: "Non-technical content updates",
@@ -47,7 +40,7 @@ export const jcDental = {
     },
     {
       heading: "Security & operational risk",
-      body: "The site handles real patient contact and booking data. That raises the bar on how auth, database access rules, and environment configuration are handled — and on how carefully deployments are reviewed before they go live.",
+      body: "The site handles patient contact and booking data. That raises the bar on how auth, database access rules, and environment configuration are handled — and on how carefully deployments are reviewed before they go live.",
     },
     {
       heading: "Performance on mobile",
@@ -88,11 +81,11 @@ export const jcDental = {
 
   lessonsLearned: [
     {
-      heading: "Directing AI is a skill of its own",
-      body: "Getting good results from AI-assisted development meant writing clear specs, reviewing every change critically, and knowing enough about the system to catch when an output looked right but wasn't. The quality of the outcome depended on the judgment applied on top of the tool, not just the tool itself.",
+      heading: "The judgment mattered more than the tool",
+      body: "Good results didn't come from AI alone — they came from writing clear specs, reviewing every change critically, and knowing the system well enough to catch an output that looked right but wasn't.",
     },
     {
-      heading: "Non-technical stakeholders need workflows, not access",
+      heading: "Staff needed a workflow, not access to code",
       body: "Giving clinic staff a CMS instead of ad-hoc code changes turned content updates from a bottleneck into a non-issue — the fix was a process change as much as a technical one.",
     },
     {
@@ -104,35 +97,40 @@ export const jcDental = {
       body: "The most useful shift was treating auditing as a recurring habit tied to every meaningful change, rather than a one-off pass done once and forgotten.",
     },
     {
-      heading: "Real usage beats assumptions",
-      body: "Several booking-flow decisions changed after watching where real friction actually showed up, which didn't always match my initial assumptions about what needed fixing.",
+      heading: "Watching beats assuming",
+      body: "Several booking-flow decisions changed after watching where patients got stuck, which didn't always match what I'd assumed needed fixing.",
     },
   ],
 
   futureImprovements: [
-    "Instrument proper analytics to measure booking funnel drop-off with real data, rather than qualitative observation alone.",
-    "Expand automated test coverage for the booking flow to reduce reliance on manual QA.",
-    "Explore multi-language support to serve a broader patient base.",
-    "Continue performance work with more aggressive image and edge-caching strategies.",
-    "Formalize a small design system to keep UI consistent as the site keeps growing.",
+    "Measure where patients drop off in the booking funnel, instead of guessing.",
+    "Cover the booking flow with automated tests, so QA isn't all manual.",
+    "Bring multi-language support to reach a broader patient base.",
+    "Push performance further with heavier image and edge-caching optimization.",
+    "Formalize a small design system, so the UI stays consistent as the site grows.",
   ],
 
   screenshots: [
     {
       label: "Homepage",
       caption: "Hero section and services overview",
+      src: "/images/jc-dental/homepage.png",
     },
     {
       label: "Booking Flow",
       caption: "Step-by-step appointment scheduling",
+      src: "/images/jc-dental/booking.png",
     },
     {
-      label: "Sanity Studio",
-      caption: "Content management view used by clinic staff",
+      label: "Staff Dashboard",
+      caption: "Analytics and operations view for clinic staff",
+      src: "/images/jc-dental/dashboard.png",
     },
     {
       label: "Mobile Experience",
       caption: "Responsive layout across breakpoints",
+      src: "/images/jc-dental/phone.png",
+      aspect: "aspect-[3/4]",
     },
   ],
 } as const;

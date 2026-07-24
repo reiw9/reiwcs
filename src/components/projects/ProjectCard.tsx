@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { ScreenshotPlaceholder } from "@/components/ui/ScreenshotPlaceholder";
+import { StatusDot } from "@/components/ui/StatusDot";
 import type { ProjectSummary } from "@/types";
 
 export function ProjectCard({ project }: { project: ProjectSummary }) {
@@ -18,6 +19,7 @@ export function ProjectCard({ project }: { project: ProjectSummary }) {
       <div className="order-1 flex flex-col justify-between md:order-2">
         <div>
           <div className="flex flex-wrap items-center gap-2">
+            <StatusDot status={project.status} />
             <Badge>{project.year}</Badge>
             <Badge>{project.role}</Badge>
           </div>
