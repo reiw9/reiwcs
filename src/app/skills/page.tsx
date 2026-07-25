@@ -7,9 +7,9 @@ import { CTASection } from "@/components/home/CTASection";
 import { skillCategories } from "@/lib/data/skills";
 
 export const metadata: Metadata = {
-  title: "Skills",
+  title: "Capabilities",
   description:
-    "Web operations, AI-assisted development, product & UX thinking, CMS/data tooling, and SEO/accessibility/QA — categorized and grounded in real project work.",
+    "What I do on a live website: keep it running, decide what changes, and make sure it stays fast, findable, and usable.",
 };
 
 const icons = [Server, Sparkles, Compass, Database, ShieldCheck];
@@ -20,9 +20,9 @@ export default function SkillsPage() {
       <Section className="pb-0">
         <Reveal>
           <SectionHeading
-            eyebrow="Skills"
-            title="What I bring, organized honestly"
-            description="Grouped by the kind of problem each skill actually solves, not by buzzword density."
+            eyebrow="Capabilities"
+            title="What the job involves"
+            description="Skills are easy to list. The way they're applied is what matters."
           />
         </Reveal>
       </Section>

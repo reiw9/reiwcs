@@ -9,7 +9,7 @@ import { CTASection } from "@/components/home/CTASection";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "How a 4th-year dental student ended up running website operations for a real production project — and why the diagnostic mindset from clinic transfers directly.",
+    "How a 4th-year dental student ended up running website operations — and why the diagnostic mindset from clinic transfers directly.",
 };
 
 export default function AboutPage() {

@@ -4,32 +4,30 @@ export const skillCategories: SkillCategory[] = [
   {
     title: "Web Operations & Infrastructure",
     description:
-      "I keep the technical side of a live website running smoothly, so everything behind the scenes just works.",
+      "I keep the site deployed, configured, and monitored — and I'm the one who sorts it out when something breaks.",
     skills: [
       "Git & GitHub workflows",
       "Cloudflare deployment & DNS",
       "Website auditing",
-      "Deployment basics",
       "Environment & config management",
       "Incident triage",
     ],
   },
   {
-    title: "Technical Direction",
+    title: "Technical Judgment",
     description:
       "I make the calls on what gets built and whether it's actually right — the tools are just tools.",
     skills: [
-      "AI-assisted coding workflows",
-      "Prompt-driven feature planning",
-      "Code review & sanity-checking AI output",
-      "Iterative debugging with AI pairing",
+      "Scoping & trade-offs",
+      "Code review",
+      "Debugging & root-cause tracing",
       "Technical documentation",
     ],
   },
   {
     title: "Product & UX",
     description:
-      "I think about the site like a product: who's using it, where they get stuck, what's actually worth fixing.",
+      "I think about the site like a product: who's using it, where they get stuck, and what's worth fixing first.",
     skills: [
       "Product thinking",
       "UI/UX improvements",
@@ -41,7 +39,7 @@ export const skillCategories: SkillCategory[] = [
   {
     title: "Content Systems",
     description:
-      "I build the systems behind a site's content — so the people using it can keep things updated themselves.",
+      "I set up the content layer so the people running the site can update it themselves, without calling me.",
     skills: [
       "Sanity CMS (schemas & content modeling)",
       "Supabase (auth, database, integration)",
@@ -52,7 +50,7 @@ export const skillCategories: SkillCategory[] = [
   {
     title: "Website Health",
     description:
-      "I keep a site healthy — fast, findable, and usable by everyone who lands on it.",
+      "I make sure the site is fast, findable, and usable by everyone who lands on it — on whatever device they bring.",
     skills: [
       "SEO optimization",
       "Accessibility (WCAG-aligned)",

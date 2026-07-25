@@ -4,7 +4,7 @@ export const siteConfig = {
   shortTitle: "Tala Kayali",
   role: "Website operator",
   description:
-    "Dental student running website operations for a real production project — UI/UX, SEO, accessibility, CMS management, and technical coordination, built hands-in-hand with AI tools.",
+    "Dental student running website operations for a live dental clinic — UI/UX, SEO, accessibility, CMS management, and the technical coordination that keeps it running.",
   url: "https://tala-kayali.dev",
   email: "tala.kayali.09@gmail.com",
   location: "Turkey",
@@ -31,7 +31,7 @@ export const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Proof", href: "/projects" },
-  { label: "Skills", href: "/skills" },
+  { label: "Capabilities", href: "/skills" },
   { label: "Experience", href: "/experience" },
   { label: "Contact", href: "/contact" },
 ] as const;

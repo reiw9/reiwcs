@@ -8,11 +8,12 @@ export const projects: ProjectSummary[] = [
     description:
       "A dental clinic's website built from scratch — where patients book appointments, staff manage content, and people find it through search.",
     role: "Website Operations",
-    year: "2026 — Present",
+    year: "2026 – Present",
     status: "ongoing",
     tags: ["UI/UX", "Security", "Performance", "QA"],
     href: "/projects/jc-dental",
     featured: true,
+    image: "/images/jc-dental/logo.jpg",
   },
 ];
 

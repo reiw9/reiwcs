@@ -7,7 +7,7 @@ import { ContactInfo } from "@/components/contact/ContactInfo";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch about remote roles, freelance work, or website operations projects.",
+    "Tell me what you're working on — a full brief or a two-line question both reach me.",
 };
 
 export default function ContactPage() {
@@ -16,8 +16,8 @@ export default function ContactPage() {
       <Reveal>
         <SectionHeading
           eyebrow="Contact"
-          title="Let's talk about what you need"
-          description="Whether it's a remote role, freelance project, or a quick question — I read everything myself."
+          title="Tell me what you're working on"
+          description="A full brief or a two-line question — both work."
         />
       </Reveal>
 

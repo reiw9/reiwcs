@@ -21,7 +21,7 @@ export function SkillsPreview() {
             href="/skills"
             className="inline-flex items-center gap-1.5 whitespace-nowrap text-sm font-medium text-foreground"
           >
-            See all skills
+            See all capabilities
             <ArrowRight className="h-4 w-4" />
           </Link>
         </Reveal>

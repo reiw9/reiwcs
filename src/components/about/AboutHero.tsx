@@ -14,8 +14,8 @@ export function AboutHero() {
         </h1>
         <p className="mt-7 max-w-xl text-balance text-lg leading-relaxed text-muted">
           I&rsquo;m a 4th-year dental student. I&rsquo;m also the person who
-          keeps a real website healthy — the kind of work most people only
-          notice when it stops happening.
+          keeps a dental clinic&rsquo;s website healthy — the kind of work most
+          people only notice when it stops happening.
         </p>
       </Reveal>
       <Reveal delay={0.1}>

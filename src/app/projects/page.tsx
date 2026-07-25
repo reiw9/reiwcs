@@ -10,7 +10,7 @@ import { otherProjects, projects } from "@/lib/data/projects";
 export const metadata: Metadata = {
   title: "Proof",
   description:
-    "Case study of JC Dental — the real, production website where I led UI/UX, SEO, accessibility, CMS management, deployment, and QA.",
+    "Case study of JC Dental — the live clinic website where I handle UI/UX, SEO, accessibility, CMS management, deployment, and QA.",
 };
 
 export default function ProjectsPage() {

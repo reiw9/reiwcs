@@ -10,7 +10,7 @@ import { Section } from "@/components/ui/Section";
 export const metadata: Metadata = {
   title: "Website Operations, AI-Assisted Development & Product Thinking",
   description:
-    "Portfolio of Tala Kayali — dental student and website operator who led UI/UX, SEO, accessibility, and technical coordination for a real production website, JC Dental.",
+    "Portfolio of Tala Kayali — dental student and website operator handling UI/UX, SEO, accessibility, and technical coordination for JC Dental.",
 };
 
 export default function HomePage() {

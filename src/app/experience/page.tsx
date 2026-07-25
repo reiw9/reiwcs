@@ -8,7 +8,7 @@ import { timeline } from "@/lib/data/experience";
 export const metadata: Metadata = {
   title: "Experience",
   description:
-    "A timeline of dental study, independent website operations work on JC Dental, and ongoing project-driven learning.",
+    "Dental school, website operations for JC Dental, and how one led to the other.",
 };
 
 export default function ExperiencePage() {
@@ -18,14 +18,25 @@ export default function ExperiencePage() {
         <Reveal>
           <SectionHeading
             eyebrow="Experience"
-            title="An honest timeline, not a résumé of job titles"
-            description="Three overlapping tracks: dental school, one real technical project, and the ongoing learning that ties them together."
+            title="Dental school, and everything else"
+            description="Clinical training and website work, at the same time. The approach underneath doesn't change."
           />
         </Reveal>
       </Section>
 
       <Section>
         <Timeline entries={[...timeline]} />
+
+        {/* closing note — sits flush with the timeline cards on wide screens */}
+        <Reveal>
+          <div className="mt-14 border-l-2 border-accent/40 pl-8 sm:ml-16">
+            <p className="max-w-2xl text-balance text-lg leading-relaxed text-foreground/85">
+              I didn&rsquo;t learn this from a course. I learned it by needing
+              something to work, breaking it a few times, and reading until I
+              understood why. That&rsquo;s still how I pick up anything new.
+            </p>
+          </div>
+        </Reveal>
       </Section>
 
       <Section className="pt-0">

@@ -17,10 +17,9 @@ export function JourneyPreview() {
         <div className="flex flex-col justify-between gap-8">
           <p className="text-balance leading-relaxed text-muted">
             I&rsquo;m training to be a dentist, not a software engineer. But
-            solving real problems on a real website — booking friction,
-            content bottlenecks, accessibility gaps — turned into a second
-            skill set: building real fixes with the same diagnostic
-            discipline I use in clinic.
+            booking friction, content bottlenecks, and accessibility gaps
+            turned into a second skill set: fixing them with the same
+            diagnostic discipline I use in clinic.
           </p>
           <Link
             href="/about"
