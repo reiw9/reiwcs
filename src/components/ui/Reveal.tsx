@@ -4,11 +4,23 @@ import { motion, type Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const variants: Variants = {
-  hidden: { opacity: 0, y: 24 },
+  hidden: { opacity: 0, y: 28, filter: "blur(6px)" },
   visible: {
     opacity: 1,
     y: 0,
+    filter: "blur(0px)",
     transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
+  },
+};
+
+// Small items (tags, pills) pop in rather than drift up.
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 12, scale: 0.9 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { type: "spring", stiffness: 340, damping: 24 },
   },
 };
 
@@ -70,7 +82,7 @@ export function RevealItem({
   className?: string;
 }) {
   return (
-    <motion.div className={cn(className)} variants={variants}>
+    <motion.div className={cn(className)} variants={itemVariants}>
       {children}
     </motion.div>
   );

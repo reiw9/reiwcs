@@ -20,40 +20,4 @@ export function Section({
   );
 }
 
-export function SectionHeading({
-  eyebrow,
-  title,
-  description,
-  align = "left",
-  className,
-}: {
-  eyebrow?: string;
-  title: string;
-  description?: string;
-  align?: "left" | "center";
-  className?: string;
-}) {
-  return (
-    <div
-      className={cn(
-        "max-w-2xl",
-        align === "center" && "mx-auto text-center",
-        className
-      )}
-    >
-      {eyebrow ? (
-        <p className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-accent">
-          {eyebrow}
-        </p>
-      ) : null}
-      <h2 className="text-balance text-display-md font-semibold text-foreground">
-        {title}
-      </h2>
-      {description ? (
-        <p className="mt-5 text-balance text-lg leading-relaxed text-muted">
-          {description}
-        </p>
-      ) : null}
-    </div>
-  );
-}
+export { SectionHeading } from "./SectionHeading";

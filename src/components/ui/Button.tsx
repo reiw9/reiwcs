@@ -13,13 +13,13 @@ type ButtonBaseProps = {
 };
 
 const base =
-  "group relative inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-medium transition-all duration-300 ease-premium focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50";
+  "group relative inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-medium transition-all duration-300 ease-premium hover:scale-[1.03] focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50";
 
 const variants: Record<NonNullable<ButtonBaseProps["variant"]>, string> = {
   primary:
-    "bg-foreground text-background hover:bg-foreground/85 active:scale-[0.98]",
+    "bg-foreground text-background shadow-[0_0_0_0_rgb(var(--accent)/0)] hover:bg-foreground/85 hover:shadow-[0_8px_24px_-4px_rgb(var(--accent)/0.45)] active:scale-[0.98]",
   secondary:
-    "border border-border bg-surface text-foreground hover:border-foreground/30 hover:bg-surface-hover active:scale-[0.98]",
+    "border border-border bg-surface text-foreground hover:border-foreground/30 hover:bg-surface-hover hover:shadow-[0_8px_24px_-4px_rgb(0_0_0/0.3)] active:scale-[0.98]",
   ghost: "text-foreground hover:bg-surface-hover active:scale-[0.98]",
 };
 

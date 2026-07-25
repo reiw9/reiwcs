@@ -31,7 +31,7 @@ export function CaseStudyHeader() {
         <p className="mt-6 max-w-2xl text-balance text-lg leading-relaxed text-muted">
           {meta.tagline}
         </p>
-        {meta.links.live !== "#" ? (
+        {(meta.links.live as string) !== "#" ? (
           <a
             href={meta.links.live}
             target="_blank"

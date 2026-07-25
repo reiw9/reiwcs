@@ -18,12 +18,14 @@ const config: Config = {
         muted: "rgb(var(--muted) / <alpha-value>)",
         accent: {
           DEFAULT: "rgb(var(--accent) / <alpha-value>)",
+          alt: "rgb(var(--accent-alt) / <alpha-value>)",
           foreground: "rgb(var(--accent-foreground) / <alpha-value>)",
         },
       },
       fontFamily: {
         sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
         mono: ["var(--font-geist-mono)", "ui-monospace", "monospace"],
+        signature: ["var(--font-signature)", "cursive"],
       },
       fontSize: {
         "display-xl": ["clamp(3rem, 7vw, 6.5rem)", { lineHeight: "1.02", letterSpacing: "-0.03em" }],
@@ -39,7 +41,8 @@ const config: Config = {
         "fade-up": "fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards",
         "fade-in": "fadeIn 0.6s ease forwards",
         marquee: "marquee 32s linear infinite",
-        float: "float 6s ease-in-out infinite",
+        float: "float 8s ease-in-out infinite",
+        "float-slow": "floatSlow 14s ease-in-out infinite",
       },
       keyframes: {
         fadeUp: {
@@ -55,8 +58,13 @@ const config: Config = {
           "100%": { transform: "translateX(-50%)" },
         },
         float: {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-10px)" },
+          "0%, 100%": { transform: "translate(0, 0) scale(1)" },
+          "33%": { transform: "translate(30px, -30px) scale(1.08)" },
+          "66%": { transform: "translate(-24px, 16px) scale(0.94)" },
+        },
+        floatSlow: {
+          "0%, 100%": { transform: "translate(0, 0) scale(1)" },
+          "50%": { transform: "translate(-36px, 24px) scale(1.12)" },
         },
       },
       transitionTimingFunction: {

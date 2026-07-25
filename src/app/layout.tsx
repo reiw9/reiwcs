@@ -1,11 +1,25 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
+import { Allison } from "next/font/google";
 import { siteConfig } from "@/lib/site";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { PageTransition } from "@/components/layout/PageTransition";
+import { RouteWipe } from "@/components/layout/RouteWipe";
+import { ScrollProgress } from "@/components/layout/ScrollProgress";
+import { BackToTop } from "@/components/layout/BackToTop";
+import { MotionProvider } from "@/components/layout/MotionProvider";
 import "./globals.css";
+
+// Wordmark only — the signature script never sets body copy.
+const signature = Allison({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-signature",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -75,7 +89,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${GeistSans.variable} ${GeistMono.variable} ${signature.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         <script
           type="application/ld+json"
@@ -85,12 +103,17 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-          <div className="noise-overlay" />
-          <Navbar />
-          <main id="main-content" className="relative z-10 pt-16">
-            {children}
-          </main>
-          <Footer />
+          <MotionProvider>
+            <div className="noise-overlay" />
+            <RouteWipe />
+            <Navbar />
+            <ScrollProgress />
+            <main id="main-content" className="relative z-10 pt-16">
+              <PageTransition>{children}</PageTransition>
+            </main>
+            <Footer />
+            <BackToTop />
+          </MotionProvider>
         </ThemeProvider>
       </body>
     </html>

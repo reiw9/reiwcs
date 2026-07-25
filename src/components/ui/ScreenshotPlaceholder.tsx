@@ -9,6 +9,7 @@ export function ScreenshotPlaceholder({
   className,
   kind = "Screenshot",
   src,
+  imageClassName,
 }: {
   label: string;
   caption?: string;
@@ -16,6 +17,7 @@ export function ScreenshotPlaceholder({
   className?: string;
   kind?: string;
   src?: string;
+  imageClassName?: string;
 }) {
   return (
     <figure
@@ -31,7 +33,7 @@ export function ScreenshotPlaceholder({
             src={src}
             alt={label}
             fill
-            className="object-cover object-top"
+            className={cn("object-cover object-top", imageClassName)}
           />
         </div>
       ) : (

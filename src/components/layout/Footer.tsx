@@ -14,7 +14,7 @@ export function Footer() {
       <Container className="py-16">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div className="max-w-sm">
-            <p className="font-mono text-sm font-medium text-foreground">
+            <p className="text-sm font-medium lowercase tracking-[0.18em] text-foreground">
               {siteConfig.shortTitle}
             </p>
             <p className="mt-4 text-sm leading-relaxed text-muted">
