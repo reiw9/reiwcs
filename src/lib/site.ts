@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Tala Kayali",
-  title: "Tala Kayali — Website Operations & AI-Assisted Web Development",
+  title: "Tala Kayali — Website Operations & Product Thinking",
   shortTitle: "Tala Kayali",
   role: "Website operator",
   description:

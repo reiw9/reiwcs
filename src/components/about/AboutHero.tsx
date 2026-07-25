@@ -1,5 +1,6 @@
 import { ScreenshotPlaceholder } from "@/components/ui/ScreenshotPlaceholder";
 import { Reveal } from "@/components/ui/Reveal";
+import { getProjectBySlug } from "@/lib/data/projects";
 
 export function AboutHero() {
   return (
@@ -20,9 +21,11 @@ export function AboutHero() {
       </Reveal>
       <Reveal delay={0.1}>
         <ScreenshotPlaceholder
-          label="Portrait"
+          label="JC Dental logo"
           kind="Photo"
           aspect="aspect-[4/5]"
+          src={getProjectBySlug("jc-dental")?.image}
+          objectPosition="object-center"
         />
       </Reveal>
     </div>

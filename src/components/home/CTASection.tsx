@@ -28,7 +28,7 @@ export function CTASection() {
               size="lg"
               icon={<ArrowRight className="h-4 w-4" />}
             >
-              See my work
+              See the work
             </Button>
           </div>
         </div>

@@ -13,10 +13,11 @@ export function ProjectCard({ project }: { project: ProjectSummary }) {
       className="group grid grid-cols-1 gap-10 rounded-3xl border border-border bg-surface p-6 transition-all duration-500 ease-premium hover:-translate-y-1.5 hover:border-foreground/20 hover:shadow-[0_28px_60px_-24px_rgb(0_0_0/0.45)] md:grid-cols-2 md:p-10"
     >
       <ScreenshotPlaceholder
-        label={`${project.title} homepage`}
+        label={`${project.title} logo`}
         aspect="aspect-[4/3]"
         className="order-2 md:order-1"
         src={project.image}
+        objectPosition="object-center"
         imageClassName="transition-transform duration-700 ease-premium group-hover:scale-[1.05]"
       />
       <div className="order-1 flex flex-col justify-between md:order-2">

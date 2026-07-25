@@ -77,7 +77,7 @@ const personJsonLd = {
   name: siteConfig.name,
   url: siteConfig.url,
   email: siteConfig.email,
-  jobTitle: "Website Operations & AI-Assisted Web Development",
+  jobTitle: "Website Operations & Product Thinking",
   description: siteConfig.description,
   knowsAbout: siteConfig.keywords,
   sameAs: [],

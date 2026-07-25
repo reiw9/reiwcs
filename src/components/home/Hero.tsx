@@ -47,8 +47,8 @@ const headlinePhrase = {
 // The accent phrase animates as one unit so its gradient stays continuous
 // across the words instead of restarting on each one.
 const headline = [
-  { text: "One", accent: false },
-  { text: "real", accent: false },
+  { text: "A", accent: false },
+  { text: "clinic", accent: false },
   { text: "website", accent: false },
   { text: "sparked", accent: false },
   { text: "a curiosity I didn’t expect.", accent: true },
@@ -157,7 +157,7 @@ export function Hero() {
             className="mx-auto mt-11 flex flex-col items-center justify-center gap-4 sm:flex-row"
           >
             <Button href="/projects" size="lg" icon={<ArrowRight className="h-4 w-4" />}>
-              View My Work
+              See the work
             </Button>
             <Button href="/contact" variant="secondary" size="lg" icon={<Mail className="h-4 w-4" />}>
               Contact Me

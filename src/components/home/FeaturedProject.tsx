@@ -14,9 +14,8 @@ export function FeaturedProject() {
     <div>
       <Reveal>
         <SectionHeading
-          eyebrow="Featured Work"
+          eyebrow="Proof"
           title="The project behind everything on this site"
-          description="One real, live product — not a portfolio piece built to look good in a screenshot."
         />
       </Reveal>
 
@@ -55,9 +54,11 @@ export function FeaturedProject() {
           </div>
 
           <ScreenshotPlaceholder
-            label="JC Dental homepage"
+            label={`${project.title} logo`}
             aspect="aspect-[4/3]"
             className="h-full"
+            src={project.image}
+            objectPosition="object-center"
           />
         </Link>
       </Reveal>

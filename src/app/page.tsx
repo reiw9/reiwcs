@@ -8,7 +8,7 @@ import { CTASection } from "@/components/home/CTASection";
 import { Section } from "@/components/ui/Section";
 
 export const metadata: Metadata = {
-  title: "Website Operations, AI-Assisted Development & Product Thinking",
+  title: "Website Operations & Product Thinking",
   description:
     "Portfolio of Tala Kayali — dental student and website operator handling UI/UX, SEO, accessibility, and technical coordination for JC Dental.",
 };

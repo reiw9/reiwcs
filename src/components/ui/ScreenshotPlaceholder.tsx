@@ -10,6 +10,10 @@ export function ScreenshotPlaceholder({
   kind = "Screenshot",
   src,
   imageClassName,
+  // Screenshots read best anchored to the top of the page; logos need the
+  // whole mark centred instead. cn() is plain clsx, so this can't be an
+  // override passed through imageClassName.
+  objectPosition = "object-top",
 }: {
   label: string;
   caption?: string;
@@ -18,12 +22,15 @@ export function ScreenshotPlaceholder({
   kind?: string;
   src?: string;
   imageClassName?: string;
+  objectPosition?: string;
 }) {
   return (
     <figure
       className={cn(
-        "overflow-hidden rounded-2xl border-2 border-dashed border-border bg-surface-hover shadow-[inset_0_1px_0_0_rgb(var(--border)/0.4)]",
-        src ? "border-solid" : "",
+        "overflow-hidden rounded-2xl border-2 border-border bg-surface-hover shadow-[inset_0_1px_0_0_rgb(var(--border)/0.4)]",
+        // Only one border-style class may be present — cn() is plain clsx, so
+        // stacking border-solid onto border-dashed lets CSS order decide.
+        src ? "border-solid" : "border-dashed",
         className
       )}
     >
@@ -33,7 +40,7 @@ export function ScreenshotPlaceholder({
             src={src}
             alt={label}
             fill
-            className={cn("object-cover object-top", imageClassName)}
+            className={cn("object-cover", objectPosition, imageClassName)}
           />
         </div>
       ) : (
