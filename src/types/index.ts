@@ -15,6 +15,7 @@ export interface ProjectSummary {
   tags: string[];
   href: string;
   featured?: boolean;
+  image?: string;
 }
 
 export interface ExternalProject {

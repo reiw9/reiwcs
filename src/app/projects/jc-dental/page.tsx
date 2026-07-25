@@ -4,7 +4,6 @@ import { Section, SectionHeading } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { CaseStudyHeader } from "@/components/projects/CaseStudyHeader";
 import { InfoGrid } from "@/components/projects/InfoGrid";
-import { ScreenshotGallery } from "@/components/projects/ScreenshotGallery";
 import { CTASection } from "@/components/home/CTASection";
 import { jcDental } from "@/lib/data/jc-dental";
 
@@ -22,12 +21,6 @@ export default function JCDentalPage() {
       </Section>
 
       <Section>
-        <Reveal>
-          <ScreenshotGallery items={jcDental.screenshots} />
-        </Reveal>
-      </Section>
-
-      <Section className="pt-0">
         <Reveal>
           <SectionHeading eyebrow={jcDental.overview.heading} title="What this project is" />
         </Reveal>

@@ -109,28 +109,4 @@ export const jcDental = {
     "Push performance further with heavier image and edge-caching optimization.",
     "Formalize a small design system, so the UI stays consistent as the site grows.",
   ],
-
-  screenshots: [
-    {
-      label: "Homepage",
-      caption: "Hero section and services overview",
-      src: "/images/jc-dental/homepage.png",
-    },
-    {
-      label: "Booking Flow",
-      caption: "Step-by-step appointment scheduling",
-      src: "/images/jc-dental/booking.png",
-    },
-    {
-      label: "Staff Dashboard",
-      caption: "Analytics and operations view for clinic staff",
-      src: "/images/jc-dental/dashboard.png",
-    },
-    {
-      label: "Mobile Experience",
-      caption: "Responsive layout across breakpoints",
-      src: "/images/jc-dental/phone.png",
-      aspect: "aspect-[3/4]",
-    },
-  ],
 } as const;
