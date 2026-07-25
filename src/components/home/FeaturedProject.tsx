@@ -58,7 +58,7 @@ export function FeaturedProject() {
             aspect="aspect-[4/3]"
             className="h-full"
             src={project.image}
-            objectPosition="object-center"
+            objectPosition="object-[50%_64%]"
           />
         </Link>
       </Reveal>
