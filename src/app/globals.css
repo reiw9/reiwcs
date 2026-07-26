@@ -157,6 +157,68 @@ body {
   animation: statementGlowKey 2.2s ease-in-out 1 both;
 }
 
+/* Footer "Elsewhere" links: the label slides out of a fixed window and the
+   handle rises to take its place. A mouse drives it on hover; on touch, where
+   no hover exists, the pair alternates on its own so a phone still gets the
+   swap instead of a dead list. The two guards are exclusive, so they never
+   fight each other. */
+.swap-label,
+.swap-handle {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.swap-handle {
+  transform: translateY(100%);
+}
+
+@media (hover: hover) {
+  .swap:hover .swap-label {
+    transform: translateY(-100%);
+  }
+  .swap:hover .swap-handle {
+    transform: translateY(0);
+  }
+}
+
+@media (hover: none) {
+  .swap-label {
+    animation: swapLabel 9s ease-in-out infinite;
+  }
+  .swap-handle {
+    animation: swapHandle 9s ease-in-out infinite;
+  }
+}
+
+@keyframes swapLabel {
+  0%,
+  32% {
+    transform: translateY(0);
+  }
+  42%,
+  82% {
+    transform: translateY(-100%);
+  }
+  92%,
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes swapHandle {
+  0%,
+  32% {
+    transform: translateY(100%);
+  }
+  42%,
+  82% {
+    transform: translateY(0);
+  }
+  92%,
+  100% {
+    transform: translateY(100%);
+  }
+}
+
 .noise-overlay {
   position: fixed;
   inset: 0;
