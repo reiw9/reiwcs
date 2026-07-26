@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/home/Hero";
 import { StackMarquee } from "@/components/home/StackMarquee";
-import { Principle } from "@/components/home/Principle";
 import { FeaturedProject } from "@/components/home/FeaturedProject";
 import { SkillsPreview } from "@/components/home/SkillsPreview";
 import { JourneyPreview } from "@/components/home/JourneyPreview";
@@ -19,10 +18,7 @@ export default function HomePage() {
     <>
       <Hero />
       <StackMarquee />
-      <Section className="pt-24 md:pt-32">
-        <Principle />
-      </Section>
-      <Section className="pb-0 pt-0">
+      <Section className="pb-0 pt-24 md:pt-32">
         <FeaturedProject />
       </Section>
       <Section>

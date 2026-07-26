@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
-import { Allison } from "next/font/google";
+import { Allison, Newsreader } from "next/font/google";
 import { siteConfig } from "@/lib/site";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import { Navbar } from "@/components/layout/Navbar";
@@ -18,6 +18,15 @@ const signature = Allison({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-signature",
+  display: "swap",
+});
+
+// One line, one place: the closing statement on Contact. Not body copy either.
+const statement = Newsreader({
+  subsets: ["latin"],
+  weight: "400",
+  style: "italic",
+  variable: "--font-statement",
   display: "swap",
 });
 
@@ -91,7 +100,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${GeistSans.variable} ${GeistMono.variable} ${signature.variable}`}
+      className={`${GeistSans.variable} ${GeistMono.variable} ${signature.variable} ${statement.variable}`}
       suppressHydrationWarning
     >
       <head>

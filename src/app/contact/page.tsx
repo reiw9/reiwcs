@@ -3,6 +3,7 @@ import { Section, SectionHeading } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { ContactInfo } from "@/components/contact/ContactInfo";
+import { Principle } from "@/components/contact/Principle";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -30,6 +31,10 @@ export default function ContactPage() {
         <Reveal delay={0.1}>
           <ContactInfo />
         </Reveal>
+      </div>
+
+      <div className="mt-24 md:mt-32">
+        <Principle />
       </div>
     </Section>
   );

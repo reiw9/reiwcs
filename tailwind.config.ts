@@ -26,6 +26,7 @@ const config: Config = {
         sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
         mono: ["var(--font-geist-mono)", "ui-monospace", "monospace"],
         signature: ["var(--font-signature)", "cursive"],
+        statement: ["var(--font-statement)", "Georgia", "serif"],
       },
       fontSize: {
         "display-xl": ["clamp(3rem, 7vw, 6.5rem)", { lineHeight: "1.02", letterSpacing: "-0.03em" }],
