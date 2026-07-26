@@ -8,7 +8,7 @@ const socials = [
 
 export function ContactInfo() {
   return (
-    <div className="flex h-full flex-col justify-between rounded-2xl border border-border bg-surface p-8">
+    <div className="flex flex-col rounded-2xl border border-border bg-surface p-8">
       <div>
         <div className="flex items-center gap-2">
           <span className="relative flex h-1.5 w-1.5">

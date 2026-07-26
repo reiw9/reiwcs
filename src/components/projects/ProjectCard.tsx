@@ -17,7 +17,7 @@ export function ProjectCard({ project }: { project: ProjectSummary }) {
         aspect="aspect-[4/3]"
         className="order-2 md:order-1"
         src={project.image}
-        objectPosition="object-[50%_64%]"
+        objectPosition="object-[50%_57%]"
         imageClassName="transition-transform duration-700 ease-premium group-hover:scale-[1.05]"
       />
       <div className="order-1 flex flex-col justify-between md:order-2">

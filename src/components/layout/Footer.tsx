@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Github, Linkedin } from "lucide-react";
+import { Github, Linkedin, ArrowUpRight } from "lucide-react";
 import { navLinks, siteConfig } from "@/lib/site";
 import { Container } from "@/components/ui/Container";
 import { LocalTime } from "@/components/layout/LocalTime";
@@ -96,6 +96,13 @@ export function Footer() {
                         {social.handle}
                       </span>
                     </span>
+                    {/* Static, always-visible external-link cue. The swap window
+                        below it has no hover on touch, so the old hover-only arrow
+                        left phones with nothing marking these as off-site links. */}
+                    <ArrowUpRight
+                      className="h-3 w-3 opacity-40 transition-opacity group-hover:opacity-100"
+                      aria-hidden
+                    />
                   </a>
                 </li>
               ))}

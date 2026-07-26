@@ -19,7 +19,6 @@ export const siteConfig = {
   },
   keywords: [
     "Website Operations",
-    "AI-Assisted Web Development",
     "Product Thinking",
     "UI/UX",
     "SEO Specialist",
