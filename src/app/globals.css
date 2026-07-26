@@ -116,6 +116,47 @@ body {
   }
 }
 
+/* The Contact statement's letter wave: a light crosses the line once, letter by
+   letter, and passes. On "texting me" it arrives and stays — the sentence keeps
+   a mark on the two words it turns on.
+   Both end on a settled colour, so the reduced-motion rule above (which collapses
+   duration to 0.01ms) lands on the finished state rather than skipping it. */
+@keyframes statementGlow {
+  0%,
+  68%,
+  100% {
+    color: rgb(var(--foreground));
+    text-shadow: none;
+  }
+  16% {
+    color: rgb(var(--accent-alt));
+    text-shadow: 0 0 18px rgb(var(--accent-alt) / 0.75);
+  }
+}
+
+@keyframes statementGlowKey {
+  0% {
+    color: rgb(var(--foreground));
+    text-shadow: none;
+  }
+  40% {
+    color: rgb(var(--accent-alt));
+    text-shadow: 0 0 18px rgb(var(--accent-alt) / 0.75);
+  }
+  100% {
+    color: rgb(var(--accent-alt));
+    text-shadow: none;
+  }
+}
+
+.statement-letter {
+  animation: statementGlow 2.2s ease-in-out 1 both;
+}
+
+.statement-letter-key {
+  animation: statementGlowKey 2.2s ease-in-out 1 both;
+}
+
 .noise-overlay {
   position: fixed;
   inset: 0;

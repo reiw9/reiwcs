@@ -22,6 +22,10 @@ export default function ContactPage() {
         />
       </Reveal>
 
+      <div className="mt-16 md:mt-20">
+        <Principle />
+      </div>
+
       <div className="mt-16 grid grid-cols-1 gap-6 lg:grid-cols-[1.3fr_1fr]">
         <Reveal delay={0.05}>
           <div className="rounded-2xl border border-border bg-surface p-8 md:p-10">
@@ -31,10 +35,6 @@ export default function ContactPage() {
         <Reveal delay={0.1}>
           <ContactInfo />
         </Reveal>
-      </div>
-
-      <div className="mt-24 md:mt-32">
-        <Principle />
       </div>
     </Section>
   );
