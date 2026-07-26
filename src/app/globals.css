@@ -116,6 +116,15 @@ body {
   }
 }
 
+/* Applied by the Hero only once it has scrolled out of view. `background-position`
+   is a paint-triggering property, so the sweep re-rasterises the headline on every
+   frame and can never move to the compositor — pointless work once nobody can see
+   it. Pausing holds the current frame and resumes from it, so the sweep looks and
+   behaves exactly the same the whole time it's on screen. */
+.sweep-paused {
+  animation-play-state: paused;
+}
+
 /* The Contact statement's letter wave: a light crosses the line once, letter by
    letter, and passes. On "texting me" it arrives and stays — the sentence keeps
    a mark on the two words it turns on.

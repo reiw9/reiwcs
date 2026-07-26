@@ -1,10 +1,11 @@
 "use client";
 
 import { Fragment, useRef } from "react";
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { motion, useInView, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Mail, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { cn } from "@/lib/utils";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -62,6 +63,12 @@ export function Hero() {
     offset: ["start start", "end start"],
   });
 
+  // The headline sweep animates background-position, which the compositor can't
+  // take over — it repaints the text every frame for as long as it runs, and it
+  // runs forever. It looks the same whether or not it's still going once the
+  // hero has scrolled off, so it only stays running while the hero is on screen.
+  const heroInView = useInView(ref);
+
   const blobY = useTransform(scrollYProgress, [0, 1], ["0%", "45%"]);
   const blobAltY = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
   const contentY = useTransform(scrollYProgress, [0, 1], ["0px", "70px"]);
@@ -116,7 +123,7 @@ export function Hero() {
                   animate="visible"
                   custom={i}
                   variants={headlinePhrase}
-                  className="text-gradient"
+                  className={cn("text-gradient", !heroInView && "sweep-paused")}
                 >
                   {word.text}
                 </motion.span>
