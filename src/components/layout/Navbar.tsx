@@ -7,7 +7,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { navLinks, siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
-import { ThemeToggle } from "./ThemeToggle";
 
 const monogram = siteConfig.name
   .split(" ")
@@ -147,7 +146,6 @@ export function Navbar() {
           </div>
 
           <div className="flex items-center gap-3">
-            <ThemeToggle className="hidden md:flex" />
             <Link
               href="/contact"
               className="group relative hidden items-center gap-1.5 overflow-hidden rounded-full bg-foreground px-5 py-2 text-sm font-medium text-background transition-all duration-300 ease-premium hover:scale-[1.04] hover:shadow-[0_8px_26px_-8px_rgb(var(--accent)/0.9)] md:inline-flex"
@@ -216,10 +214,6 @@ export function Navbar() {
                     </motion.div>
                   );
                 })}
-                <div className="mt-4 flex items-center justify-between border-t border-border pt-5">
-                  <span className="text-sm text-muted">Theme</span>
-                  <ThemeToggle />
-                </div>
               </div>
             </motion.div>
           ) : null}

@@ -3,7 +3,6 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { Allison, Newsreader } from "next/font/google";
 import { siteConfig } from "@/lib/site";
-import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { PageTransition } from "@/components/layout/PageTransition";
@@ -101,7 +100,6 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${GeistSans.variable} ${GeistMono.variable} ${signature.variable} ${statement.variable}`}
-      suppressHydrationWarning
     >
       <head>
         <script
@@ -111,19 +109,17 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased">
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-          <MotionProvider>
-            <div className="noise-overlay" />
-            <RouteWipe />
-            <Navbar />
-            <ScrollProgress />
-            <main id="main-content" className="relative z-10 pt-16">
-              <PageTransition>{children}</PageTransition>
-            </main>
-            <Footer />
-            <BackToTop />
-          </MotionProvider>
-        </ThemeProvider>
+        <MotionProvider>
+          <div className="noise-overlay" />
+          <RouteWipe />
+          <Navbar />
+          <ScrollProgress />
+          <main id="main-content" className="relative z-10 pt-16">
+            <PageTransition>{children}</PageTransition>
+          </main>
+          <Footer />
+          <BackToTop />
+        </MotionProvider>
       </body>
     </html>
   );

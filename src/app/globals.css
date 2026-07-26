@@ -2,19 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* One theme, dark. Light mode and its toggle were removed 2026-07-26: the whole
+   design — purple accents, glow shadows, the noise layer, the Contact wave — is
+   tuned for a dark canvas, and next-themes' `enableSystem` had been quietly
+   serving a weaker light version to anyone on a light-mode OS. These are the
+   former `.dark` values, now the only palette. `color-scheme` makes native UI
+   (scrollbars, form controls) render dark to match. */
 :root {
-  --background: 243 243 246;
-  --foreground: 10 10 12;
-  --surface: 255 255 255;
-  --surface-hover: 248 248 250;
-  --border: 224 224 228;
-  --muted: 100 100 112;
-  --accent: 79 70 229;
-  --accent-alt: 147 51 234;
-  --accent-foreground: 255 255 255;
-}
-
-.dark {
+  color-scheme: dark;
   --background: 8 8 9;
   --foreground: 250 250 250;
   --surface: 18 18 20;
