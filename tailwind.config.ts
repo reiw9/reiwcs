@@ -40,7 +40,6 @@ const config: Config = {
       animation: {
         "fade-up": "fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards",
         "fade-in": "fadeIn 0.6s ease forwards",
-        marquee: "marquee 32s linear infinite",
         float: "float 8s ease-in-out infinite",
         "float-slow": "floatSlow 14s ease-in-out infinite",
       },
@@ -52,10 +51,6 @@ const config: Config = {
         fadeIn: {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
-        },
-        marquee: {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-50%)" },
         },
         float: {
           "0%, 100%": { transform: "translate(0, 0) scale(1)" },

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/home/Hero";
-import { StackMarquee } from "@/components/home/StackMarquee";
 import { FeaturedProject } from "@/components/home/FeaturedProject";
 import { SkillsPreview } from "@/components/home/SkillsPreview";
 import { JourneyPreview } from "@/components/home/JourneyPreview";
@@ -17,8 +16,11 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <StackMarquee />
-      <Section className="pb-0 pt-24 md:pt-32">
+      {/* The hero's own pb-28/36 supplies the gap here; the strip that used to
+          sit between them (with its own top padding) is gone, so no extra pt.
+          cn() has no tailwind-merge, so the md: override is spelled out —
+          without md:pt-0, the Section's md:py-32 wins at desktop. */}
+      <Section className="pb-0 pt-0 md:pt-0">
         <FeaturedProject />
       </Section>
       <Section>
