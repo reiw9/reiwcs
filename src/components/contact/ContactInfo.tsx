@@ -9,31 +9,19 @@ const socials = [
 export function ContactInfo() {
   return (
     <div className="flex flex-col rounded-2xl border border-border bg-surface p-8">
-      <div>
-        <div className="flex items-center gap-2">
-          <span className="relative flex h-1.5 w-1.5">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-60" />
-            <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
+      <div className="flex flex-col gap-5">
+        <a
+          href={`mailto:${siteConfig.email}`}
+          className="group flex items-center gap-3 text-sm text-foreground"
+        >
+          <Mail className="h-4 w-4 text-muted" strokeWidth={1.5} />
+          <span className="underline decoration-border underline-offset-4 transition-colors group-hover:decoration-foreground">
+            {siteConfig.email}
           </span>
-          <p className="font-mono text-xs text-muted">
-            Open to remote & freelance work
-          </p>
-        </div>
-
-        <div className="mt-8 flex flex-col gap-5">
-          <a
-            href={`mailto:${siteConfig.email}`}
-            className="group flex items-center gap-3 text-sm text-foreground"
-          >
-            <Mail className="h-4 w-4 text-muted" strokeWidth={1.5} />
-            <span className="underline decoration-border underline-offset-4 transition-colors group-hover:decoration-foreground">
-              {siteConfig.email}
-            </span>
-          </a>
-          <div className="flex items-center gap-3 text-sm text-muted">
-            <MapPin className="h-4 w-4" strokeWidth={1.5} />
-            {siteConfig.location} · Remote-friendly
-          </div>
+        </a>
+        <div className="flex items-center gap-3 text-sm text-muted">
+          <MapPin className="h-4 w-4" strokeWidth={1.5} />
+          {siteConfig.location} · Remote-friendly
         </div>
       </div>
 

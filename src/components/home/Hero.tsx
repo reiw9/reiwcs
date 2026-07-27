@@ -98,23 +98,7 @@ export function Hero() {
 
       <Container className="relative">
         <motion.div style={reduced ? undefined : { y: contentY, opacity: contentOpacity }}>
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            custom={0}
-            variants={fadeUp}
-            className="mx-auto flex w-fit items-center gap-2 rounded-full border border-border bg-surface px-4 py-1.5"
-          >
-            <span className="relative flex h-1.5 w-1.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-60" />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
-            </span>
-            <span className="font-mono text-xs text-muted">
-              Open to remote &amp; freelance work
-            </span>
-          </motion.div>
-
-          <h1 className="mx-auto mt-8 max-w-4xl text-balance text-center text-display-lg font-semibold text-foreground">
+          <h1 className="mx-auto max-w-4xl text-balance text-center text-display-lg font-semibold text-foreground">
             {headline.map((word, i) =>
               word.accent ? (
                 <motion.span
