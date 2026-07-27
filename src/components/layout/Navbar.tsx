@@ -106,7 +106,11 @@ export function Navbar() {
           </Link>
 
           <div className="hidden items-center gap-1 md:flex">
-            {navLinks.map((link) => {
+            {/* Contact is the CTA pill on the right of this same row, so it would
+                appear twice on desktop — drop it from the plain link list here.
+                The mobile menu and footer still map the full navLinks (no pill
+                there), so Contact stays present once in both. */}
+            {navLinks.filter((link) => link.href !== "/contact").map((link) => {
               const active =
                 link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
               return (
